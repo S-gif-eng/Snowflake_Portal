@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: snowflake-portal
+    env: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn app:app -w 1 --chdir backend
+    envVars:
+      - key: SECRET_KEY
+        value: "your_secure_key_here"
