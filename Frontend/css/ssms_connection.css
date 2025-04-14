@@ -1,0 +1,122 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    overflow-y: hidden;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+h1 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #2575fc;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+input {
+    padding: 12px 15px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+    width: 95%;
+}
+
+input:focus {
+    border-color: #2575fc;
+    outline: none;
+    box-shadow: 0 0 6px rgba(37, 117, 252, 0.4);
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#connectionResult {
+    text-align: center;
+    color: #4caf50;
+    margin-top: 20px;
+}
+
+.back-button {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #2575fc;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    #connectionResult {
+        font-size: 13px;
+    }
+}

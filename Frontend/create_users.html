@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+    <link rel="stylesheet" href="css/create_user.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Create User</h1>
+        <form id="create-user-form">
+            <label for="user-name">User Name:</label>
+            <input type="text" id="user-name" placeholder="Enter user name" required>
+
+            <label for="user-password">Password:</label>
+            <input type="password" id="user-password" placeholder="Enter password" required>
+
+            <label for="role-name">Default Role:</label>
+            <select id="role-name" required>
+                <option value="">Select a role</option>
+                <!-- Roles will be dynamically populated here -->
+            </select>
+
+            <label for="user-email">Email:</label>
+            <input type="email" id="user-email" placeholder="Enter email" required>
+
+            <button type="submit">Create User</button>
+            <div id="spinner" class="hidden">⏳ Creating user...</div>
+            <div id="error-message" class="hidden"></div>
+        </form>
+        <script src="js/config.js"></script>
+        <a href="home.html" class="back-button">Back to Home</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="js/create_user.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSMS View Management</title>
+    <link rel="stylesheet" href="css/migrate_views.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SSMS View Management</h1>
+
+        <!-- Login Form -->
+        <form id="loginForm">
+            <label for="server">SSMS Server:</label>
+            <input type="text" id="server" placeholder="Enter SSMS Server" required>
+
+            <label for="database">SSMS Database:</label>
+            <input type="text" id="database" placeholder="Enter SSMS Database" required>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter Username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter Password" required>
+
+            <button type="submit">Login & Fetch Views</button>
+        </form>
+
+        <!-- View Selection Section -->
+        <div id="viewSection" style="display: none;">
+            <h2>Select Environment & Views</h2>
+
+            <label for="environment">Select Target Environment:</label>
+            <select id="environment">
+                <option value="TST_DEV">DEV</option>
+                <option value="TST_UAT">UAT</option>
+                <option value="TST_PROD">PROD</option>
+            </select>
+
+            <h3>Available Views:</h3>
+            <ul id="viewsList"></ul>
+
+            <button id="migrateViewsBtn" style="display: none;">Alter Selected Views</button>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/migrate_views.js"></script>
+</body>
+</html>

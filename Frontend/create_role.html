@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Role</title>
+    <link rel="stylesheet" href="css/create_role.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Create Role</h1>
+        <form id="create-role-form">
+            <label for="role-name">Role Name:</label>
+            <input type="text" id="role-name" placeholder="Enter role name" required>
+
+            <div id="privileges-dropdowns">
+                <!-- Privileges dropdowns will be dynamically populated -->
+            </div>
+
+            <label for="granted-to-role">Grant Role To (optional):</label>
+            <select id="granted-to-role">
+                <option value="">Select a role (optional)</option>
+                <!-- Roles will be dynamically populated -->
+            </select>
+
+            <button type="submit">Create Role</button>
+            <div id="spinner" class="hidden">⏳ Creating role...</div>
+            <div id="error-message" class="hidden"></div>
+        </form>
+        <script src="js/config.js"></script>
+        <a href="home.html" class="back-button">Back to Home</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="js/create_role.js"></script>
+</body>
+</html>

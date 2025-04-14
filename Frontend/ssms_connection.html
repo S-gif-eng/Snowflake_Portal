@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSMS Connection Setup</title>
+    <link rel="stylesheet" href="css/ssms_connection.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Test SSMS Connection</h1>
+        <form id="ssmsForm">
+            <label for="ssmsServer">SSMS Server:</label>
+            <input type="text" id="ssmsServer" placeholder="Enter SSMS Server" required>
+
+            <label for="ssmsDatabase">SSMS Database:</label>
+            <input type="text" id="ssmsDatabase" placeholder="Enter SSMS Database" required>
+
+            <label for="ssmsUsername">Username:</label>
+            <input type="text" id="ssmsUsername" placeholder="Enter Username" required>
+
+            <label for="ssmsPassword">Password:</label>
+            <input type="password" id="ssmsPassword" placeholder="Enter Password" required>
+
+            <label for="linkedServer">Linked Server:</label>
+            <input type="text" id="linkedServer" placeholder="Enter Linked Server Name" required>
+
+            <button type="submit">Test Connection</button>
+
+            <a href="home.html" class="back-button">Back to Home</a>
+        </form>
+        <div id="connectionResult"></div>
+
+        <div class="actions">
+            <button id="createViewsBtn" style="display: none;">Create Views in SSMS</button>
+            <button id="createTablesBtn" style="display: none;">Create Tables in SSMS</button>
+
+        </div>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/ssms_connection.js"></script>
+</body>
+</html>

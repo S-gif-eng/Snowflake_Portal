@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowflake Connection</title>
+    <link rel="stylesheet" href="css/create_views.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Test Snowflake Connection</h1>
+        <form id="connectionForm">
+            <label for="account">Account:</label>
+            <input type="text" id="account" name="account" required>
+
+            <label for="user">User:</label>
+            <input type="text" id="user" name="user" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="warehouse">Warehouse:</label>
+            <input type="text" id="warehouse" name="warehouse" required>
+
+            <label for="database">Database:</label>
+            <input type="text" id="database" name="database" required>
+
+            <label for="schema">Schema:</label>
+            <input type="text" id="schema" name="schema" required>
+
+            <button type="submit">Test Connection</button>
+        </form>
+        <a href="home.html" class="back-button">Back to Home</a>
+    </div>
+
+    <!-- Toast notifications container -->
+    <div id="toastContainer"></div>
+    <script src="js/config.js"></script>
+    <script src="js/create_views.js"></script>
+  
+</body>
+</html>

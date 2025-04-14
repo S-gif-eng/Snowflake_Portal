@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Databases and Schemas</title>
+    <link rel="stylesheet" href="css/databases.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Databases and Schemas</h1>
+
+        <label for="database">Select Database:</label>
+        <select id="database" onchange="fetchSchemas()">
+            <option value="">Select Database</option>
+        </select>
+
+        <label for="schema">Select Schema:</label>
+        <select id="schema" onchange="fetchTablesAndViews()">
+            <option value="">Select Schema</option>
+        </select>
+
+        <h3>Tables:</h3>
+        <div id="tablesContainer"></div>
+        <a href="home.html" class="back-button">Back to Home</a>
+    </div>
+
+
+<!-- Edit Modal -->
+<div id="editModal" class="modal" style="display:none;">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+          <h2>Edit <span id="editObjectType"></span> Details</h2>
+          <button id="replaceUnderscores" class="btn">Replace _ with Space</button>
+      </div>
+      <form id="editForm">
+          <label for="editedObjectName">View/Table:</label>
+          <input type="text" id="editedObjectName" name="editedObjectName">
+          <div id="columnsContainer"></div>
+          <button type="submit">Save</button>
+      </form>
+  </div>
+</div>
+
+  
+    <script src="js/config.js"></script>
+    <script src="js/databases.js"></script>
+    
+</body>
+</html>

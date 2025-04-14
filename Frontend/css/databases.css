@@ -1,0 +1,220 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    overflow-y: hidden;
+}
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    max-height: 600px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+}
+
+h1 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #2575fc;
+    font-weight: 600;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+select:focus {
+    border-color: #2575fc;
+    background-color: #eaf4fe;
+    outline: none;
+}
+
+h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#tablesContainer {
+    margin-top: 20px;
+    padding: 15px;
+    max-height: 300px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    overflow-y: scroll;
+}
+
+.back-button {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #2575fc;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+.checkboxDiv {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f2f7fc;
+    border-radius: 6px;
+}
+
+.checkboxDiv input {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.checkboxDiv label {
+    font-size: 16px;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+.checkboxDiv input:checked + label {
+    color: #2575fc;
+}
+
+/* Button Styles */
+button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    button {
+        font-size: 14px;
+    }
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 600px;
+    background-color: rgb(188, 184, 184);
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    height: 60%;
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+.modal-content {
+    position: relative;
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#columnsContainer {
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.edit-btn.disabled {
+    background-color: #ccc !important;
+    color: #666 !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
