@@ -4,3 +4,4 @@ Flask-Session
 snowflake-connector-python==3.0.3
 pyodbc
 gunicorn
+cryptography==41.0.3
