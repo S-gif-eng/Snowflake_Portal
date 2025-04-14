@@ -3,3 +3,4 @@ Flask-Cors==3.0.10
 Flask-Session
 snowflake-connector-python==3.0.3
 pyodbc
+gunicorn
