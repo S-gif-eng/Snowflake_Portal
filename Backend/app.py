@@ -4,7 +4,7 @@ from flask_cors import CORS
 from flask_session import Session
 from snowflake_routes import snowflake_bp
 
-app = Flask(__name__, static_folder="../frontend", static_url_path='')
+app = Flask(__name__, static_folder="../Frontend", static_url_path='')
 
 # Secret key & session
 app.secret_key = os.getenv("SECRET_KEY", "default_secret_key")
